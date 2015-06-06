@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <!-- konfigurasi: menghilangkan line break -->
+    <jsp-config>
+        <jsp-property-group>
+            <url-pattern>*.jsp</url-pattern>
+            <trim-directive-whitespaces>true</trim-directive-whitespaces>
+        </jsp-property-group>
+    </jsp-config>
+    <!-- ## Admin ## -->
+    <!-- clsOtentifikasi -->
+    <servlet>
+        <servlet-name>clsOtentifikasi</servlet-name>
+        <servlet-class>pilar.servlet.admin.ClsSrvAdmOtentifikasi</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ClsSrvUploadFoto</servlet-name>
+        <servlet-class>pilar.servlet.admin.ClsSrvUploadFoto</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clsOtentifikasi</servlet-name>
+        <url-pattern>/clsOtentifikasi</url-pattern>
+    </servlet-mapping>
+    <!-- clsCaptcha -->
+    <servlet>
+        <servlet-name>clsCaptcha</servlet-name>
+        <servlet-class>pilar.servlet.adpub.ClsSrvAdpubCaptcha</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clsCaptcha</servlet-name>
+        <url-pattern>/clsCaptcha</url-pattern>
+    </servlet-mapping>
+    <!-- clsTest -->
+    <servlet>
+        <servlet-name>clsTest</servlet-name>
+        <servlet-class>pilar.servlet.clsTest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>clsTest</servlet-name>
+        <url-pattern>/clsTest</url-pattern>
+    </servlet-mapping>
+    <!-- ## Publik ## -->
+    <!-- @@ Session @@ -->
+    <servlet-mapping>
+        <servlet-name>ClsSrvUploadFoto</servlet-name>
+        <url-pattern>/ClsSrvUploadFoto</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            120
+        </session-timeout>
+    </session-config>
+</web-app>

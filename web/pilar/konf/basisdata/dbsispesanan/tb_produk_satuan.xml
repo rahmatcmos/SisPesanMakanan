@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_produk_satuan">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,singkatan,catatan</kolom>
+    </tb>    
+</tabel>

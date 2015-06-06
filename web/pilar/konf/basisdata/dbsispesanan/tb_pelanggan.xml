@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_pelanggan">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,email,sandi,kode_orang,tanggal</kolom>
+    </tb>    
+</tabel>

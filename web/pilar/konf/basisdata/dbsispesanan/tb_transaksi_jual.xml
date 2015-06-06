@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_transaksi_jual">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode_faktur_jual,kode_produk,kode_orang,harga_satuan,kuantitas,subtotal,catatan,tanggal,jam,timestamp</kolom>
+    </tb>    
+</tabel>

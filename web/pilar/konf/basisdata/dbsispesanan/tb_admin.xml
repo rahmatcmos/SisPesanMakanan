@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_admin">
+        <indeks>nomor</indeks>
+        <kolom>nomor,nama,sandi,kode_karyawan</kolom>
+    </tb>    
+</tabel>

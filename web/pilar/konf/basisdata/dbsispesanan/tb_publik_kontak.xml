@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_publik_kontak">
+        <indeks>nomor</indeks>
+        <kolom>nomor,nama,email,perihal,komentar,tanggal,jam,timestamp</kolom>
+    </tb>    
+</tabel>

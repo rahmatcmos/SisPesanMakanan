@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_faktur_jual">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,pajak,biaya_antar,total,kode_orang,kode_metode_pesan,kode_metode_bayar,status_pesanan,status_bayar,catatan,tanggal,waktu,timestamp</kolom>
+    </tb>    
+</tabel>

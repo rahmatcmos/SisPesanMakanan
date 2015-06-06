@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_resto_biaya_kurir">
+        <indeks>nomor</indeks>
+        <kolom>nomor,biaya,tanggal,jam,timestamp</kolom>
+    </tb>    
+</tabel>

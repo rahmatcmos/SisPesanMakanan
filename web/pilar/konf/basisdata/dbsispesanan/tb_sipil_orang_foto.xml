@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_sipil_orang_foto">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,nama_berkas,nama_berkas_asli,ekstensi,sampul,keterangan,kode_sipil_orang</kolom>
+    </tb>    
+</tabel>

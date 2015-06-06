@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_hlm_profil">
+        <indeks>nomor</indeks>
+        <kolom>nomor,teks,kode_foto,publikasi,tanggal,jam</kolom>
+    </tb>    
+</tabel>

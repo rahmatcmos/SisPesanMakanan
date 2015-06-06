@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_sipil_gelar">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,singkatan,letak,catatan</kolom>
+    </tb>    
+</tabel>

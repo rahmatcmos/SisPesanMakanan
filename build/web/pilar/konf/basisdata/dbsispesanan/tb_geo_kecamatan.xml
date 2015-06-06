@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_geo_kecamatan">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,catatan,kode_geo_negara,kode_geo_provinsi,kode_geo_kabupaten</kolom>
+    </tb>    
+</tabel>

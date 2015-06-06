@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_sipil_orang">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,kode_sebutan,nama_depan,nama_belakang,nama_lengkap,jenis_kelamin,tl_kode_geo_negara,tl_kode_geo_provinsi,tl_kode_geo_kabupaten,tl_kode_geo_kecamatan,tanggal_lahir,catatan</kolom>
+    </tb>    
+</tabel>

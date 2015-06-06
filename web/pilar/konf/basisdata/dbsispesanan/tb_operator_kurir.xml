@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_operator_kurir">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode_faktur,kode_operator,kode_orang_pelanggan,status_proses,tanggal,jam,timestamp</kolom>
+    </tb>    
+</tabel>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_resto_operator">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,sandi,catatan,kode_resto_karyawan,kode_resto_jenis_operator,aktif</kolom>
+    </tb>    
+</tabel>

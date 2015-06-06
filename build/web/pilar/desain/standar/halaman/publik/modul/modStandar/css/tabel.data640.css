@@ -1,0 +1,348 @@
+/* #tabel data */
+#idDivTabelData{
+    border: 1px solid #285e8e;
+    border-radius: 4px;
+    width: 642px;
+    padding: 0px 0px 0px 0px;
+    /*-moz-box-shadow: 0px 2px 2px 0px #153049;
+    -webkit-box-shadow: 0px 2px 2px 0px #153049;
+    box-shadow: 0px 2px 2px 0px  #153049;*/
+}
+
+#idTabelData{
+    border: none !important;
+    width: 640px;
+    margin:0px 0px 0px 0px;
+}
+
+#idTabelData th{
+    height: 30px;
+    text-align: center;
+    border-top: none;
+    border-right: 1px solid #285e8e;
+    border-left: 1px solid #285e8e;
+    border-bottom: 1px solid #285e8e;
+    vertical-align: middle;
+    background-color: #153049;
+    color: #ffffff;
+}
+
+#idTabelData th.clsThKodeCb{
+    text-align: center;
+    border-top-left-radius: 3px;
+    border-left:none;
+    width: 40px;
+}
+
+#idTabelData th.clsThNomor{
+    text-align: center;
+    width: 40px;
+}
+
+#idTabelData th.clsThKode{
+    text-align: center;
+    width: 100px;
+}
+
+#idTabelData th.clsThNama{
+    text-align: center;
+    /* width: 132px; */
+}
+
+#idTabelData th.clsThOperasiHapus{
+    text-align: center;
+    width: 40px !important;
+}
+
+#idTabelData th.clsThOperasiTambah{
+    text-align: center;
+    width: 40px !important;
+    border-top-right-radius: 3px;
+    border-right:none;
+}
+
+#idTabelData tr{
+    height:30px;
+}
+
+#idTabelData tr.clsTrWarna{
+    height:30px;
+    background-color: #E5E5E5;
+}
+
+#idTabelData tr.clsTrBiasa{
+    height:30px;
+    background-color: transparent;
+}
+
+#idTabelData tr.clsTrWarna:hover,tr.clsTrBiasa:hover{
+    height:30px;
+    background-color: lightyellow !important; 
+    border:none;
+}
+
+#idTabelData td{
+    height: 30px;
+    vertical-align: middle;
+    border-top:none !important;
+    border-bottom:1px solid #285e8e;
+    border-left:1px solid #285e8e;
+    border-right:1px solid #285e8e;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#idTabelData td.clsTdAkhir{
+    height: 30px;
+    vertical-align: middle;
+    border-top:1px solid #285e8e;
+    border-bottom:none !important;
+    border-left:1px solid #285e8e;
+    border-right:1px solid #285e8e;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#idTabelData td.clsTdCbAkhir{
+    height: 30px;
+    vertical-align: middle;
+    text-align: center;
+    border-bottom-left-radius: 3px;
+    border-bottom:none;
+    border-left:none;
+    width: 40px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#idTabelData td.clsTdTambahAkhir{
+    height: 30px;
+    vertical-align: middle;
+    border:1px solid #285e8e;
+    border-bottom:none;
+    border-left:1px solid #285e8e;
+    border-right:none;
+    border-bottom-right-radius: 3px !important;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+#idTabelData td.clsTdCb{
+    padding: 8px;   
+    text-align: center;
+    border-left:none;
+}
+
+#idTabelData td.clsTdNomor{
+    padding: 8px;   
+    text-align: center;
+}
+
+#idTabelData td.clsTdNama{
+    border-right:none !important;
+}
+
+#idTabelData td.clsTdTombolUbah,td.clsTdTombolHapus{
+    text-align: center !important;
+    padding: 0px 0px 0px 0px !important;
+    border-left: none !important;
+    border-right: none !important;
+    width:40px;
+}
+
+#idTabelData tr:last-child td{
+   border-bottom: none !important; 
+}
+
+#idTabelData tr:last-child td{
+   border-bottom: none !important; 
+}
+
+button.clsTombol, button.clsTombolUbah, button.clsTombolHapus{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 32px;
+    /* font: 16px Arial; */
+    width: 24px;
+    height: 24px;
+    margin: 4px 0px 4px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+    
+}
+
+button.clsTombolNavSebelum, button.clsTombolNavBerikut{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 26px;
+    font: 16px Arial;
+    width:24px;
+    height:24px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+button.clsTombolMenuBalik{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 26px;
+    font: 16px Arial;
+    width:48px;
+    height:48px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+button.clsTombolCari{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 26px;
+    font: 16px Arial;
+    width:24px;
+    height:24px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-color: transparent;
+}
+
+img.clsGbrTombol{
+    margin: 0px 0px 0px 0px !important;
+    padding: 0px 0px 0px 0px !important;
+}
+
+/* navigasi */
+#idDivNavigasi{
+    margin: 8px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    clear:both;
+    float:none;
+}
+#idTabelNavigasi{
+    margin-top:4px;
+    width: 640px;
+}
+
+#idTabelNavigasi td{
+    /* border:1px solid #336699;*/
+    padding:0px !important;
+    vertical-align:middle;
+}
+
+#idTabelNavigasi td.clsTdTeksJData{
+    width:130px;
+}
+
+#idTabelNavigasi td.clsTdNoHalaman,#idTabelNavigasi td.clsTdNoHalamanMaks{
+    width:30px;
+}
+#idTabelNavigasi td.clsTdTeksNoHalaman{
+    text-align:left;
+    width:88px;
+}
+#idTabelNavigasi td.clsTdTeksDash{
+    width:14px;
+    text-align:center;
+}
+#idTabelNavigasi td.clsTdSpasi{
+    width:8px;
+}
+#idTabelNavigasi td.clsTdSebelum, #idTabelNavigasi td.clsTdBerikut{
+    width:30px;
+    text-align:center;
+}
+
+.clsJumData{
+    width:30px;
+    text-align:center;
+}
+.clsNoHalaman{
+    width:30px;
+    text-align:center;
+}
+.clsNoHalamanMaks{
+    width:30px;
+    text-align:center;
+}
+
+/* pencarian */
+#idDivCari{
+    background-color: #E5E5E5;
+    width: 640px;
+    height: 40px;
+    padding-top: 4px;
+    margin-bottom: 8px;
+    /*-moz-box-shadow: 0px 2px 2px 0px #153049;
+    -webkit-box-shadow: 0px 2px 2px 0px #153049;
+    box-shadow: 0px 2px 2px 0px  #153049;*/
+    border-radius: 4px;
+    
+}
+#idTabelCari{
+    width:620px;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    border:none !important;
+}
+
+#idTabelCari td{
+    /* border:1px solid #336699; */
+    padding:0px !important;
+    height:32px;
+    vertical-align:middle;
+}
+
+#idTabelCari td.clsTdTeksCari{
+    width:500px;
+}
+
+.clsTeksCari{
+    width: 500px;
+    text-align: center;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border:1px solid #B5B5B5;
+    height:30px;
+}
+
+.clsSelCari{
+    width:80px;
+    height:30px;
+    border:1px solid #B5B5B5;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+button.close {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* penampakan div */
+.clsSembunyikanDiv{
+    visibility: hidden !important; /* collapse elemen */
+    display: none; /* elemen tidak di-collapse */
+}
+
+.clsTampilkanDiv{
+    /*display: inline;*/ 
+}
+
+/* pesan modal */
+.clsTampilkanPesan{
+    margin: 10px 4px 4px 4px !important;
+    padding: 4px;
+    /* border: 1px solid red !important; */
+    color: red !important;
+    display: block;
+}
+
+.clsSembunyikanPesan{
+    margin: 4px 4px 4px 4px !important;
+    padding: 4px;
+    /* border: 1px solid red !important; */
+    color: red !important;
+    visibility: hidden !important; /* elemen tidak di-collapse */
+    display: none; /* collapse elemen */
+}
+

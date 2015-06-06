@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<basisdata>       
+    <bd nama="dbsispesanan">
+        <alamatIP>127.0.0.1</alamatIP>
+        <port>3306</port>
+        <namaBD>dbsispesanan</namaBD>
+        <namaID>root</namaID>
+        <sandiID>ioojigbz</sandiID>
+    </bd>
+</basisdata>

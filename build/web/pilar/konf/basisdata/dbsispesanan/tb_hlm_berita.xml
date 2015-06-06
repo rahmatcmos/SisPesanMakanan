@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_hlm_berita">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,judul,teks,kode_foto,publikasi,tanggal,jam,timestamp</kolom>
+    </tb>    
+</tabel>

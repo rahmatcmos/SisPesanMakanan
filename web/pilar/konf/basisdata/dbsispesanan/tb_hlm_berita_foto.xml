@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_hlm_berita_foto">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,nama_berkas,nama_berkas_asli,ekstensi,sampul,keterangan,kode_hlm_berita</kolom>
+    </tb>    
+</tabel>

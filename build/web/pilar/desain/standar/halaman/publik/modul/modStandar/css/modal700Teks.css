@@ -1,0 +1,31 @@
+/* ----------------------------
+ Modal Standar Teks
+ ----------------------------
+ */
+.clsModalIsi700Teks {
+    width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: 0 none;
+    margin-bottom: 20px;
+    margin-left:10px;
+}
+.clsModalJudul700Teks {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 15px;
+    text-align: left !important;
+}
+.clsModalBody700Teks p,
+.clsModalJudul700Teks h4 {
+    margin: 0;
+}
+.clsModalBody700Teks {
+    padding: 20px;
+    text-align: left !important;
+}
+
+.clsFormKontak {
+    margin-top: 20px;
+}

@@ -1,0 +1,24 @@
+/* ----------------------------
+ Modal tabel
+ ----------------------------
+ */
+.clsModalIsiTabel {
+    width: 700px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    background-color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    outline: 0 none;
+}
+.clsModalJudulTabel {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 15px;
+    text-align: left !important;
+}
+.clsModalBodyTabel p,
+.clsModalJudulTabel h4 {
+    margin: 0;
+}
+.clsModalBodyTabel {
+    padding: 20px;
+}

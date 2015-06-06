@@ -1,0 +1,63 @@
+#idDivData{
+    margin-top:10px;
+    width:706px;
+    border:none;
+    padding-right: 16px;
+    overflow: hidden;
+}
+
+#idDivKotakFoto{
+    display: inline-block;
+    float: left;
+    width: 200px;
+    margin:14px;
+    position: relative;
+}
+
+#idDivKotakFoto img.clsBerkasFoto{
+    border: 8px solid #fff;
+    border-bottom: 45px solid #fff;
+    -webkit-box-shadow: 3px 3px 8px #777;
+    -moz-box-shadow: 3px 3px 8px #777;
+    box-shadow: 3px 3px 8px #777;
+    border-radius: 4px;
+}
+
+#idTautanOpsGaleri{
+    float: right;
+    width: 200px;
+    position: absolute;
+    right: -8px;
+    top: 8px;
+    padding-right: 4px;
+    z-index: 1000;
+    color: #FFFFFF;
+    font-weight: bold;
+    overflow: hidden;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0.5);
+    border:none;
+}
+
+#idDivOpsHapus{
+    float:right;
+}
+
+#idDivOpsUbah{
+    float:right;
+    margin-left:4px;
+    margin-right:4px;
+}
+
+#idDivKotakFoto p {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 12px;
+}
+
+#idDivKotakFoto input.clsCheckBoxFoto{
+    float:left;
+    margin-left:10px;
+    bottom:0px;
+}

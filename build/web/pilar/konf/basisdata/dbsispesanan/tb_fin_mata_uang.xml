@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tabel>
+    <tb nama="tb_fin_mata_uang">
+        <indeks>nomor</indeks>
+        <kolom>nomor,kode,nama,singkatan,kode_geo_negara,catatan</kolom>
+    </tb>    
+</tabel>

@@ -1,0 +1,253 @@
+/* tabel keranjang belanja */
+#divTabelKeranjang{
+    width: 732px;
+    padding: 4px;
+    border: 2px lightslategrey solid;
+    border-radius: 10px !important;
+}
+
+table.clsTabelKeranjang{
+    width: 720px;
+}
+
+table.clsTabelKeranjang tr.clsTR:hover{
+    background-color:#93C914;
+}
+
+table.clsTabelKeranjang tr.clsTRWarna:hover{
+    background-color:#93C914;
+}
+
+table.clsTabelKeranjang tr.clsTRWarna{
+    background-color: #C9C9C9;
+}
+table.clsTabelKeranjang th{
+    background-color: #C11B1B;
+    padding: 4px;
+    font:14px Scada,'Exo 2',Arial;
+    color: white;
+    text-align:left;
+    width: 100px;
+    height: 32px;
+}
+
+table.clsTabelKeranjang th.clsThNo{
+    background-color: #C11B1B;
+    padding: 4px 8px 0px 8px;
+    font:14px Scada,'Exo 2',Arial;
+    width: 40px;
+    text-align: center;
+    border-radius: 6px 0px 0px 0px;
+}
+
+table.clsTabelKeranjang th.clsThNama{
+    background-color: #C11B1B;
+    padding: 4px 8px 0px 8px;
+    font:14px Scada,'Exo 2',Arial;
+    width: 120px;
+}
+
+table.clsTabelKeranjang th.clsThSubTotal{
+    background-color: #C11B1B;
+    padding: 4px 8px 0px 8px;
+    font:14px Scada,'Exo 2',Arial;
+    text-align:left;
+    width: 120px;
+    border-radius: 0px 6px 0px 0px;
+}
+
+table.clsTabelKeranjang td{
+    padding: 0px 8px 0px 8px;
+    vertical-align: middle;
+    height: 48px;
+}
+
+table.clsTabelKeranjang td.clsTdNo{
+    padding: 0px 8px 0px 8px;
+    text-align: center;
+}
+
+table.clsTabelKeranjang td.clsTdSubTotal{
+    padding: 0px 20px 0px 8px;
+    text-align: right;
+}
+
+table.clsTabelKeranjang td.clsTdGambarTombol{
+    padding: 0px 20px 0px 8px;
+    text-align: right;
+}
+
+/* tabel total */
+#divTabelTotal{
+    width: 732px;
+    margin: 10px 0px 0px 0px;
+    padding: 4px;
+    border: 2px lightslategrey solid;
+    border-radius: 10px !important;
+    font: 18px Arial;
+}
+
+table.clsTabelTotal{
+    width: 720px;
+}
+table.clsTabelTotal td{
+    padding: 8px;
+    vertical-align: middle;
+}
+table.clsTabelTotal td.clsTdMtUang{
+    width: 32px;
+    text-align:right;
+    padding-right:4px;
+    vertical-align: middle;
+}
+table.clsTabelTotal td.clsTdTotal{
+    width: 100px;
+    text-align:left;
+    padding-left: 0px;
+    vertical-align: middle;
+}
+
+/* tabel status keranjang belanja */
+table.clsTabelStatusKeranjang{
+    width: 620px;
+    margin:10px 0px 10px 0px;
+}
+
+table.clsTabelStatusKeranjang td.clsTulisan{
+    font:16px Scada,'Exo 2',Arial;
+    font-weight:bold;
+    vertical-align: bottom;
+}
+
+
+table.clsTabelStatusKeranjang td.clsStatusKeranjang{
+    width: 310px;
+    text-align:right;
+    vertical-align: bottom;
+}
+
+button.clsTombolKurang{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 26px;
+    font: 16px Arial;
+    width:28px;
+    height:28px;
+    margin: 0px 0px 4px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+img.clsGbrTombol{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+input[type="text"].clsKuantitas,input[type="text"].clsKuantitasIdx{
+    height: 30px;
+    width: 60px;
+    border-radius: 6px;
+    border:2px lightslategrey solid;
+    font: 16px Arial;
+    padding: 0px 8px 0px 8px;
+    text-align: center;
+}
+
+/* pengantaran */
+#idTabelPengantaran{
+    margin-top:10px;
+    margin-bottom:10px;
+    border-collapse:collapse;
+}
+
+#idTabelPengantaran td{
+    padding:8px;
+}
+
+#idTabelPengantaran td.clsGambar{
+    vertical-align:middle;
+    height:48px;
+}
+
+#idTabelPengantaran td.clsTeks{
+    vertical-align:middle;
+    height:48px;
+    font-weight: bold;
+}
+
+button.clsTombolKeranjang{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 32px;
+    font: 16px Arial;
+    width:32px;
+    height:32px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: none;
+}
+
+/* tabel navigasi transaksi */
+#idDivNavTrans{
+    width: 730px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#idTabelNavTrans{
+    width: 730px;
+    border-collapse: collapse;
+}
+
+#idTabelNavTrans td{
+    padding: 10px 0px 0px 10px;
+}
+
+#idTabelNavTrans td.clsTdKiri{
+    width: 365px;
+    text-align: left;
+}
+
+#idTabelNavTrans td.clsTdKanan{
+    width: 365px;
+    text-align: right;
+}
+
+button.clsTombolKanan,button.clsTombolKiri{
+    /* border:2px lightslategrey solid; */
+    border: none;
+    border-radius: 48px;
+    font: 16px Arial;
+    width:48px;
+    height:48px;
+    margin: 0px 0px 4px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+img.clsGambarTombolKanan, img.clsGambarTombolKiri{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+/* tabel metode pembayaran */
+#idTabelMetodePembayaran{
+    border-collapse: collapse;
+}
+
+#idTabelMetodePembayaran td{
+    padding: 4px;
+}
+
+#idTabelPilihMetodePembayaran{
+    border-collapse: collapse;
+}
+
+#idTabelPilihMetodePembayaran td{
+    padding: 4px;
+    vertical-align: middle;
+}
+
+#idSpanKanan, #idSpanKiri{
+    color: #93C914;
+    font: 18px Lobster,Pacifico;
+    font-weight: strong;
+}
