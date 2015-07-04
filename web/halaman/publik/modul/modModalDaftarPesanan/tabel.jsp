@@ -1,3 +1,4 @@
+<%@page import="pilar.cls.ClsPelanggan"%>
 <%@page import="java.sql.*"%>
 <%@page import="pilar.cls.ClsKonf" %>
 <%@page import="pilar.cls.ClsOlahKata"%>
@@ -68,9 +69,24 @@
     /* ada teks cari */
     if(vTeksCari.trim().equals("")){
         /* jumlah data total */
-        vJumDataTotal = oOpsBasisdata.fJumDataTotalStd("", "", vNamaTabel, new String[]{"kode"});
+        vJumDataTotal = oOpsBasisdata.fJumDataTotalKondisiArr("",
+                "", 
+                "tb_faktur_jual", 
+                new String[]{"kode"},
+                new String[]{"kode_orang","status_bayar"},
+                new String[]{vKodeOrang,"0"},
+                new String[]{"=","="},
+                new String[]{"AND"});
         /* keluaran pencarian */
-        vArrHasil = oOpsBasisdata.fArrAmbilDataDbStd("", "", vNamaTabel, new String[]{"kode","judul","tanggal","jam"}, "nomor", vUrutanData, new String[]{vGetOffset,vGetJumData});
+        vArrHasil = oOpsBasisdata.fArrAmbilDataDbKondisiArr("",
+                "", 
+                "tb_faktur_jual", 
+                new String[]{"kode","status_pesanan","tanggal","waktu"}, 
+                new String[]{"kode_orang","status_bayar"},
+                new String[]{vKodeOrang,"0"},
+                "nomor", 
+                "DESC", 
+                new String[]{vGetOffset,vGetJumData},"="); 
     }
     
     if(!vTeksCari.trim().equals("")){
@@ -102,14 +118,14 @@
                 vSbJSON.append("{\"kode\":\""); 
                 vSbJSON.append(vArrHasil.getString("kode"));
                 vSbJSON.append("\", "); 
-                vSbJSON.append("\"tanggal\":\"");
-                vSbJSON.append(vArrHasil.getString("tanggal"));
+                vSbJSON.append("\"status\":\"");
+                vSbJSON.append(vArrHasil.getString("status_pesanan"));
                 vSbJSON.append("\", "); 
                 vSbJSON.append("\"tanggal\":\"");
                 vSbJSON.append(vArrHasil.getString("tanggal"));
                 vSbJSON.append("\", ");
                 vSbJSON.append("\"jam\":\"");
-                vSbJSON.append(vArrHasil.getString("jam"));
+                vSbJSON.append(vArrHasil.getString("waktu"));
                 vSbJSON.append("\"");
                 vSbJSON.append("}");
                 vBarisPertama = false;
@@ -118,14 +134,14 @@
                 vSbJSON.append("{\"kode\":\""); 
                 vSbJSON.append(vArrHasil.getString("kode"));
                 vSbJSON.append("\", "); 
-                vSbJSON.append("\"judul\":\"");
-                vSbJSON.append(vArrHasil.getString("judul").replace("\"","\\\""));
+                vSbJSON.append("\"status\":\"");
+                vSbJSON.append(vArrHasil.getString("status_pesanan"));
                 vSbJSON.append("\", "); 
                 vSbJSON.append("\"tanggal\":\"");
                 vSbJSON.append(vArrHasil.getString("tanggal").replace("\"","\\\""));
                 vSbJSON.append("\", ");
                 vSbJSON.append("\"jam\":\"");
-                vSbJSON.append(vArrHasil.getString("jam").replace("\"","\\\""));
+                vSbJSON.append(vArrHasil.getString("waktu").replace("\"","\\\""));
                 vSbJSON.append("\"");
                 vSbJSON.append("}");
             }

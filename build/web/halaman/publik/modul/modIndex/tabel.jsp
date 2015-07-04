@@ -154,6 +154,7 @@
         if(!vArrHasil.getString("kode").trim().equals("")){
             
             String vItKodeProduk = vArrHasil.getString("kode");
+            String vItHarga =  vArrHasil.getString("harga");
             String vItBerkasFoto = oOpsBasisdata.fAmbilSatuDataKondisiArr("", "", "tb_resto_produk_foto", "nama_berkas", 
                     new String[]{"sampul","kode_resto_produk"},
                     new String[]{"1",vItKodeProduk},
@@ -180,6 +181,9 @@
                 vSbJSON.append("\", ");
                 vSbJSON.append("\"ekstensi\":\"");
                 vSbJSON.append(vItEkstensiBerkasFoto);
+                vSbJSON.append("\", ");
+                vSbJSON.append("\"harga\":\"");
+                vSbJSON.append(vItHarga);
                 vSbJSON.append("\"");
                 vSbJSON.append("}");
                 vBarisPertama = false;
@@ -196,6 +200,9 @@
                 vSbJSON.append("\", ");
                 vSbJSON.append("\"ekstensi\":\"");
                 vSbJSON.append(vItEkstensiBerkasFoto);
+                vSbJSON.append("\", ");
+                vSbJSON.append("\"harga\":\"");
+                vSbJSON.append(vItHarga);
                 vSbJSON.append("\""); 
                 vSbJSON.append("}");
             }

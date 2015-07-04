@@ -415,7 +415,25 @@
                         var vJarakRestoPelanggan = google.maps.geometry.spherical.computeDistanceBetween(vKoordResto, 
                             vKoordPelanggan);
                             
-                        console.log("Jarak lokasi resto-pelanggan: " + vJarakRestoPelanggan);
+                        //console.log("Jarak lokasi resto-pelanggan: " + vJarakRestoPelanggan);
+                        console.log("Jarak lokasi resto-pelanggan: " + parseFloat(vJarakRestoPelanggan.toFixed(2)));
+                        var vFloatJarakRP = parseFloat(vJarakRestoPelanggan.toFixed(2));
+                        /* radius 10 km */
+                        if(vFloatJarakRP > parseFloat(10000.00)){
+                            console.log("Kelebihan!")
+                            $('#idPesanModal').html("Maaf, lokasi pengantaran Anda belum dapat kami layani.<br>" +
+                                    "Batas pelayanan antar kami sejauh radius 10 km dari lokasi kami.<br>"
+                                );
+                            /* tampilkan pesan */
+                            $('#idPesanModal').addClass("clsTampilkanDiv");
+                            $('#idPesanModal').removeClass("clsSembunyikanDiv");
+                        }else{
+                            /* kosongkan pesan */
+                            $('#idPesanModal').html("");
+                            /* sembunyikan pesan */
+                            $('#idPesanModal').removeClass("clsTampilkanDiv");
+                            $('#idPesanModal').addClass("clsSembunyikanDiv");
+                        }
                             
                         /*2)  membuat rute */
                         var bounds = new google.maps.LatLngBounds();

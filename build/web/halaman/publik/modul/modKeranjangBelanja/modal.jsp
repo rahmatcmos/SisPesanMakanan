@@ -51,7 +51,7 @@
                     + "<td>" + vProduk.getvPrvHarga()+ "</td>"
                     + "<td><input type=\"text\" id=\"fidIpKts" + i + "\" name=\"fnmIpKts" + vProduk.getvPrvKode() + "\" value=\"" + vProduk.getvPrvKuantitas() + "\" class=\"clsKuantitas\" /></td>"
                     + "<td><em>" + vProduk.getvPrvSatuan() + "</em></td>"
-                    + "<td class=\"clsTdSubTotal\"><strong>" + vSubTotal + "</strong></td>"
+                    + "<td class=\"clsTdSubTotal\">" + vSubTotal + "</td>"
                     + "<td class=\"clsTdGambarTombol\"><button class=\"clsTombolKurang grow\" id=\"fidTombolKurang" + i + "\" value=\"" + vProduk.getvPrvKode() + "\">"
                     + "<img src=\"" + vDirGambarTombol + "/tombolKeranjangKurang.png\"/></button></td>"
                     + "</tr>");
@@ -74,7 +74,7 @@
         String vBiayaKurir = oOpsBasisdata.fAmbilSatuData("", "", "tb_resto_biaya_kurir", "biaya", "nomor", "1");
 
         Double vTotalKurir = oKeranjang.fTotal();
-
+        
         if(!vBiayaKurir.equals("")){
             vTotalKurir = (vPajakTotal + oKeranjang.fTotal()) + Double.valueOf(vBiayaKurir);
         }
@@ -292,7 +292,8 @@
                     var vTotal = 0.0;
                     for(var i=1;i<vJumBaris;i++){
                         vSubTotal = parseFloat($('#idTabelKeranjang tr').eq(i).find('td').eq(6).html());
-                        vTotal += parseFloat(vSubTotal);                        
+                        vTotal += parseFloat(vSubTotal);       
+                        console.log("Sub Total: " + i + " --> " + $('#idTabelKeranjang tr').eq(i).find('td').eq(6).html());
                     }
                     
                     var vPajakResto = '${vPajakResto}';

@@ -66,8 +66,8 @@
             vJam = oFormatWaktu.format(oTanggalKini);
             
             /* timestamp */
-            long vUnixTimestamp = Instant.now().getEpochSecond();
-            vTimestamp = String.valueOf(vUnixTimestamp);
+            //long vUnixTimestamp = Instant.now().getEpochSecond();
+            vTimestamp = "";
            /* operasi basisdata */
             if(!vKode.equals("")){
                 /* tabel operator kurir */

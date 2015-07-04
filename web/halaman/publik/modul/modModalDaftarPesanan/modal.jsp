@@ -265,20 +265,35 @@
                                     //console.log(el.nama);
                                     i += 1;
                                     var vWarnaTr = (i%2==0) ? 'clsTrWarna':'clsTrBiasa';
+                                    var vStatus = "";
+                                    if(el.status == 0){
+                                        vStatus = "Belum dikonfirmasi";
+                                    }
+                                    if(el.status == 1){
+                                        vStatus = "Sedang dimasak";
+                                    }
+                                    if(el.status == 2){
+                                        vStatus = "Sedang diantar";
+                                    }
+                                    if(el.status == 3){
+                                        vStatus = "Selesai";
+                                    }
 
                                     if(i<vJData && i != vArrDataSvr[2]){
                                         $('#idTabelDataModalR4 > tbody:last').append('<tr class=\"'+ vWarnaTr + '\">' + 
-                                            '<td class=\"clsTdTanggal\">' + el.tanggal + ', Pkl. ' + el.jam + ' WIB</td>'+
-                                            '<td class=\"clsTdNama\">' + el.judul + '</td>'+
-                                            '<td class=\"clsTdTombolPilih\"><button class=\"clsTombolPilihModal shrink\" style=\"display:none\" value=\"' + el.kode + '@'+ el.judul + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolPilih.png\"></button></td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.kode + ' WIB</td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.tanggal + ' WIB</td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.jam + ' WIB</td>'+
+                                            '<td class=\"clsTdNama\">' + vStatus + '</td>'+
                                             '</tr>');
                                     }
 
                                     if(i>=vJData || i == vArrDataSvr[2]){
                                         $('#idTabelDataModalR4 > tbody:last').append('<tr class=\"'+ vWarnaTr + '\">' + 
-                                            '<td class=\"clsTdAkhir clsTdTanggal\">' + el.tanggal + ', Pkl. ' + el.jam + ' WIB</td>'+
-                                            '<td class=\"clsTdNama clsTdAkhir\">' + el.judul + '</td>'+
-                                            '<td class=\"clsTdTombolPilih clsTdPilihAkhir\"><button class=\"clsTombolPilihModal shrink\" style=\"display:none\" value=\"' + el.kode + '@'+ el.judul + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolPilih.png\"></button></td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.kode + ' WIB</td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.tanggal + ' WIB</td>'+
+                                            '<td class=\"clsTdTanggal\">' + el.jam + ' WIB</td>'+
+                                            '<td class=\"clsTdNama clsTdAkhir\">' + vStatus + '</td>'+
                                             '</tr>');
                                     }
 
@@ -364,9 +379,10 @@
                         <div id="idDivTabelDataModalR4">
                             <table id="idTabelDataModalR4">
                                 <thead class="clsThTabel">
+                                    <th class="clsThTanggal">Kode</th>
                                     <th class="clsThTanggal">Tanggal</th>
-                                    <th class="clsThJudul">Judul ${vModKonfNamaData}</th>
-                                    <th class="clsThPilih"></th>
+                                    <th class="clsThTanggal">Jam</th>
+                                    <th class="clsThJudul">Status Pesanan</th>
                                 </thead>
                                 <tbody></tbody>
                             </table>

@@ -955,7 +955,6 @@ public class ClsOperasiBasisdata {
                     boolean vIterasiPertama = true;
                     for(String vKolomRef: vFArrKolomRef){
                         
-                        
                         if(vIterasiPertama){
                             vSbSQL.append(vDbTabel);
                             vSbSQL.append(".`");
@@ -1005,6 +1004,8 @@ public class ClsOperasiBasisdata {
                     }
 
                 }
+                
+                System.out.println("#### ->" + vSbSQL.toString());
 
                 /* eksekusi kalimat SQL */
                 ResultSet vArrHasil = null;
@@ -1019,7 +1020,7 @@ public class ClsOperasiBasisdata {
                 /* pencatatan sistem */
                 if(ClsKonf.vKonfCatatSistem == true){
                     String vNamaKelas = "ClsOperasiBasisdata.java";
-                    String vNamaMetode = "fJumDataTotalKondisi";
+                    String vNamaMetode = "fJumDataTotalKondisiArr";
                     String vCatatan = vNamaKelas + "#" + vNamaMetode + "#" + e.toString();
                     /* obyek catat */
                     ClsCatat oCatat = new ClsCatat();

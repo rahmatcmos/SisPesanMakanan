@@ -633,7 +633,7 @@
                                                         '<div id=\"idDivOpsFoto\" class=\"clsDivOpsFoto\"><button class=\"clsTombolFoto shrink\" style=\"display:none\" value=\"' + el.kode + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolFoto.png\"></button></div>' +
                                                     '</a>' +
                                                 '</div>' +
-                                                '<p>'+ el.nama +'</p>' +
+                                                '<p>'+ el.nama +' <br>Rp ' + el.harga + ',-</p>' +
                                             '</div>';
                                     i+=1;
                                     /* berkas foto */
@@ -750,12 +750,6 @@
                 $('#idTautanPengguna').smallipop({}, vMenuPengguna);
                 
                 $(".smallipop-instance").css("width","100px");
-                
-                $(document).on('click', '.clsTautanProfilPengguna',function(e){
-                    e.preventDefault();
-                    alert("hello!");
-                    
-                });
                 
                 $(document).on('click', '.clsTautanLokasiPelanggan',function(e){
                     e.preventDefault();
@@ -895,6 +889,25 @@
                     e.preventDefault();
                 });
                 
+                /* 7) Profil Pengguna */
+                $(document).on('click', '.clsTautanProfilPengguna',function(e){
+                    e.preventDefault();
+                    
+                    var d = new Date();
+                    var dtWaktu = d.getTime(); 
+                    
+                    Custombox.open({
+                        target: '${URLModPublik}/modProfilPengguna/modal.jsp?o=u&w='+dtWaktu,
+                        effect: 'slide',
+                        animation: 'top,top',
+                        width: 380,
+                        cache: false,
+                        overlayClose: false,
+                        zIndex: 1000
+                    });
+                    
+                });
+                
                 /* ### keranjang belanja ### */
                 var vJumProduk = '${vJumProduk}';
                 
@@ -979,6 +992,9 @@
                     $('#idMenuDM').addClass("clsTampilkanDiv");
                                         
                 }
+                
+                /* sticky menu */
+                $("#idDivTabelMenuIndexPublik").sticky({topSpacing:0});
             /* akhir jQuery */
             });
         //]]>

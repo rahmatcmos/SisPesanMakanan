@@ -70,6 +70,7 @@ table.clsTabelKeranjang td.clsTdNo{
 table.clsTabelKeranjang td.clsTdSubTotal{
     padding: 0px 20px 0px 8px;
     text-align: right;
+    font-weight: bold;
 }
 
 table.clsTabelKeranjang td.clsTdGambarTombol{

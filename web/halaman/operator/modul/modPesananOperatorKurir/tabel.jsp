@@ -67,9 +67,22 @@
     /* ada teks cari */
     if(vTeksCari.trim().equals("")){
         /* jumlah data total */
-        vJumDataTotal = oOpsBasisdata.fJumDataTotalStd("", "", vNamaTabel, new String[]{"kode_faktur"});
+        vJumDataTotal = oOpsBasisdata.fJumDataTotalKondisiArr("", "", vNamaTabel, 
+                new String[]{"kode_faktur"},
+                new String[]{"status_proses"},
+                new String[]{"0"},
+                new String[]{"="},
+                new String[]{"AND"});
         /* keluaran pencarian */
-        vArrHasil = oOpsBasisdata.fArrAmbilDataDbStd("", "", vNamaTabel, new String[]{"kode_faktur","kode_orang_pelanggan"}, "nomor", vUrutanData, new String[]{vGetOffset,vGetJumData});
+        vArrHasil = oOpsBasisdata.fArrAmbilDataDbKondisiArr("",
+                "", 
+                vNamaTabel, 
+                new String[]{"kode_faktur","kode_orang_pelanggan"}, 
+                new String[]{"status_proses"},
+                new String[]{"0"},
+                "nomor", 
+                vUrutanData, 
+                new String[]{vGetOffset,vGetJumData},"=");
     }
     
     if(!vTeksCari.trim().equals("")){
@@ -105,6 +118,9 @@
                 vSbJSON.append("\", "); 
                 vSbJSON.append("\"nama\":\"");
                 vSbJSON.append(vNamaLengkap);
+                vSbJSON.append("\", "); 
+                vSbJSON.append("\"kodeorang\":\"");
+                vSbJSON.append(vKodeOrang);
                 vSbJSON.append("\""); 
                 vSbJSON.append("}");
                 vBarisPertama = false;
@@ -115,6 +131,9 @@
                 vSbJSON.append("\", "); 
                 vSbJSON.append("\"nama\":\"");
                 vSbJSON.append(vNamaLengkap);
+                vSbJSON.append("\", "); 
+                vSbJSON.append("\"kodeorang\":\"");
+                vSbJSON.append(vKodeOrang);
                 vSbJSON.append("\""); 
                 vSbJSON.append("}");
             }

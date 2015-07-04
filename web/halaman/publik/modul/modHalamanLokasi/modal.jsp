@@ -586,10 +586,11 @@
                         var vJarakRestoPelanggan = google.maps.geometry.spherical.computeDistanceBetween(vKoordResto, 
                             vKoordPelanggan);
                             
-                        console.log("Jarak lokasi resto-pelanggan: " + vJarakRestoPelanggan);
-                        var vIntJarakRP = parseInt(vJarakRestoPelanggan);
+                        console.log("Jarak lokasi resto-pelanggan 1: " + parseFloat(vJarakRestoPelanggan.toFixed(2)));
+                        var vFloatJarakRP = parseFloat(vJarakRestoPelanggan.toFixed(2));
                         
-                        if(vIntJarakRP > 10000){
+                        if(vFloatJarakRP > parseFloat(1000.00)){
+                            console.log("Kelebihan!")
                             $('#idPesanModal').html("Maaf, lokasi pengantaran Anda belum dapat kami layani.<br>" +
                                     "Batas pelayanan antar kami sejauh radius 10 km dari lokasi kami."
                                 );
@@ -619,12 +620,12 @@
                                 vDirectionsDisplay.setDirections(response);
                                 vDirectionsDisplay.setMap(vMap);
                                 /* marker */
-                                var vArrLeg = response.routes[ 0 ].legs[ 0 ];
+                                var vArrLeg = response.routes[0].legs[0];
                                 //fBuatMarker(vArrLeg.start_location, '', 'Restoran' );
                                 //fBuatMarker(vArrLeg.end_location, '', 'Pelanggan' );
                                 $('#idCatatan').val(vArrLeg.end_address);
                             } else {
-                                alert("Directions Request from " + vKoordResto.toUrlValue(6) + " to " + vKoordPelanggan.toUrlValue(6) + " failed: " + status);
+                                alert("Permintaan jalur (Directions Request) dari " + vKoordResto.toUrlValue(6) + " ke " + vKoordPelanggan.toUrlValue(6) + " gagal: " + status);
                             }
                         });
                     }

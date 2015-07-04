@@ -68,11 +68,16 @@
   position: absolute;
   text-align: center;
   width: 100%;
-  bottom: 12px;
+  bottom: 8px;
+  font-size: 12px;
 }
 
 #idDivKotakFoto input.clsCheckBoxFoto{
     float:left;
     margin-left:10px;
     bottom:0px;
+}
+
+#idHargaProduk{
+    font-size: 11px;
 }

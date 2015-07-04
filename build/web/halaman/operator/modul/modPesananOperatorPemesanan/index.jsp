@@ -140,7 +140,7 @@
                     var vKode = $(this).attr("value");
                     
                     /* operasi ajax */
-                    var vReqHapusData = $.ajax({
+                    var vReqUbahData = $.ajax({
                         url: "${URLMod}/proses.jsp?w=" + vWaktu,
                         type: "POST",
                         data: { 
@@ -148,6 +148,14 @@
                             dtKode : vKode
                         },
                         dataType: "text"
+                    });
+                    
+                    /* [2] permintaan selesai */
+                    vReqUbahData.done(function(vDataSvr) {
+                        $('#idNoHalaman').val(0);
+                        $('#idJumData').val(vBanyakTampilanData);
+                        $('#idKodeCb').removeAttr('checked');
+                        fBuatTabel(true);
                     });
                     
                     /* z-index datepicker */
@@ -412,11 +420,17 @@
                         
                         /* bila tidak ada data dan kata pencarian kosong */
                         if(vDataSvr.trim() != "" && vArrDataSvr[0] == 0 && $('#idTeksCari').val() == ""){
+                           //console.log("Tidak ada data!");
                            /* sembunyikan bagian pencarian dan tabel */
                            $("#idDivCari").attr('style','display:none');
                            $("#idDivTabelData").attr('style','display:none');
-                           $("#idDivTambah48").removeClass('clsSembunyikanDiv').addClass('clsTampilkanDiv');
-                           $("#idDivTambah48").fadeIn().show();
+                           $('#idDivNavigasi').hide();
+                           //$("#idDivTambah48").removeClass('clsSembunyikanDiv').addClass('clsTampilkanDiv');
+                           //$("#idDivTambah48").fadeIn().show();
+                           $("#idPesanTabel").removeClass("clsSembunyikanPesan");
+                           $("#idPesanTabel").hide().addClass("clsTampilkanPesan")
+                           $("#idPesanTabel").fadeIn().css('border','1px solid red');
+                           $("#idPesanTabel").html("Belum ada pesanan dari pelanggan.");
                         }
                         
                         if(vDataSvr.trim() != "" && vArrDataSvr[0] != 0){  
@@ -466,7 +480,7 @@
                                         '<td class=\"clsTdNama\">' + el.nama + '</td>'+
                                         '<td class=\"clsTdTombolUploadFoto\"><!--<button class=\"clsTombolUploadFoto shrink\" style=\"display:none\" value=\"'+ el.kode + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/lokasiTanda.png\"></button>--></td>'+
                                         '<td class=\"clsTdTombolHapus\"><!--<button class=\"clsTombolHapus shrink\" style=\"display:none\" value=\"'+ el.kode + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolHapus.png\"></button>--></td>'+
-                                        '<td class=\"clsTdTombolUbah\"><button class=\"clsTombolUbah shrink\" style=\"display:none\" value=\"' + el.kode + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolUbah.png\"></button></td>'+
+                                        '<td class=\"clsTdTombolUbah\"><button class=\"clsTombolUbah shrink\" style=\"display:none\" value=\"' + el.kode + '\"><img class=\"clsGbrTombol grow\" src=\"${URLModAdpubGambarTombol}/tombolPilih.png\"></button></td>'+
                                         '</tr>');
                                 }
                                 
@@ -616,8 +630,8 @@
                             <tr>
                                 <td><select id="idSelCari" class="clsSelCari">
                                         <option value="nomor">Indeks</option>
-                                        <option value="kode">Kode</option>
-                                        <option value="nama_lengkap" selected>Nama</option>
+                                        <option value="kode_faktur">Kode Faktur</option>
+                                        <option value="nama_pelanggan" selected>Nama Pelanggan</option>
                                     </select>
                                 </td>
                                 <td><input type="text" id="idTeksCari" class="clsTeksCari" value=""/></td>

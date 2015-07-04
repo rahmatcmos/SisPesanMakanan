@@ -71,6 +71,7 @@
     <script src="${URLModAdpubJSMd}/modNumber/js/jquery.number.min.js"></script>
     <script src="${URLModAdpubJSMd}/modDatePicker/js/jquery.datetimepicker.js"></script>
     <script src="${URLModAdpubJSMd}/modCoinSlider/js/coin-slider.min.js"></script>
+    <script src="${URLModAdpubJSMd}/modSticky/js/jquery.sticky.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=false&libraries=places,geometry,directionService"></script>
     <jsp:invoke fragment="atas"/>
   </head>
