@@ -106,14 +106,15 @@ CREATE TABLE IF NOT EXISTS `tb_faktur_jual` (
   KEY `faktur_jual_kode_pelanggan` (`kode_orang`),
   KEY `faktur_jual_kode_metode_bayar` (`kode_metode_bayar`),
   KEY `faktur_jual_kode_metode_pesan` (`kode_metode_pesan`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table dbsispesanan.tb_faktur_jual: ~2 rows (approximately)
+-- Dumping data for table dbsispesanan.tb_faktur_jual: ~3 rows (approximately)
 DELETE FROM `tb_faktur_jual`;
 /*!40000 ALTER TABLE `tb_faktur_jual` DISABLE KEYS */;
 INSERT INTO `tb_faktur_jual` (`nomor`, `kode`, `pajak`, `biaya_antar`, `total`, `kode_orang`, `kode_metode_pesan`, `kode_metode_bayar`, `status_pesanan`, `status_bayar`, `catatan`, `tanggal`, `waktu`, `timestamp`) VALUES
-	(1, 'FKWYCDHBSNMK0FTZ', '4800.0', '13000', '65800.0', 'ORP5G8T5KBUEQ5EU', '', '', '0', '0', '', '2015-06-04', '10:04', '1433387078'),
-	(2, 'FKDBK2PEW9JSSFYJ', '4800.0', '13000', '65800.0', 'ORP5G8T5KBUEQ5EU', '', '', '2', '0', '', '2015-06-04', '10:16', '1433387804');
+	(1, 'FKYFSGFGYPH4K414', '10300.0', '13000', '126300.0', 'ORP5G8T5KBUEQ5EU', '', '', '3', '0', '', '2015-06-12', '12:11', '1434085879'),
+	(2, 'FKWSSNU8XBZH9CSR', '10300.0', '13000', '126300.0', 'ORP5G8T5KBUEQ5EU', '', '', '3', '0', '', '2015-06-12', '12:54', '1434088465'),
+	(3, 'FKXVH4AUTQU3BFAC', '4800.0', '13000', '65800.0', 'ORP5G8T5KBUEQ5EU', '', '', '3', '0', '', '2015-06-12', '14:16', '1434093363');
 /*!40000 ALTER TABLE `tb_faktur_jual` ENABLE KEYS */;
 
 
@@ -852,7 +853,7 @@ DELETE FROM `tb_lokasi_pelanggan`;
 /*!40000 ALTER TABLE `tb_lokasi_pelanggan` DISABLE KEYS */;
 INSERT INTO `tb_lokasi_pelanggan` (`nomor`, `kode_orang`, `lintang`, `bujur`, `alamat`, `catatan`) VALUES
 	(1, 'ORYZUMUUMQKM4M56', '-6.367805209052893', '106.81674021653293', 'Jalan KH Ahmad Dahlan, Beji, Kota Depok, Jawa Barat 16425, Republic of Indonesia', ''),
-	(2, 'ORP5G8T5KBUEQ5EU', '-6.367777693530583', '106.81737326085204', 'Jalan KH Ahmad Dahlan, Beji, Kota Depok, Jawa Barat 16425, Republic of Indonesia', 'Lantai 1, kamar no. 11.');
+	(2, 'ORP5G8T5KBUEQ5EU', '-6.377571238563825', '106.81383810937041', 'Jalan Haji Asmawi No. 72-75, Beji, Kota Depok, Jawa Barat 16421, Indonesia', 'Lantai 1, kamar no. 12');
 /*!40000 ALTER TABLE `tb_lokasi_pelanggan` ENABLE KEYS */;
 
 
@@ -926,13 +927,15 @@ CREATE TABLE IF NOT EXISTS `tb_operator_dapur` (
   `timestamp` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`nomor`),
   UNIQUE KEY `kode_faktur` (`kode_faktur`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Dumping data for table dbsispesanan.tb_operator_dapur: ~0 rows (approximately)
+-- Dumping data for table dbsispesanan.tb_operator_dapur: ~2 rows (approximately)
 DELETE FROM `tb_operator_dapur`;
 /*!40000 ALTER TABLE `tb_operator_dapur` DISABLE KEYS */;
 INSERT INTO `tb_operator_dapur` (`nomor`, `kode_faktur`, `kode_operator`, `kode_orang_pelanggan`, `status_proses`, `tanggal`, `jam`, `timestamp`) VALUES
-	(1, 'FKDBK2PEW9JSSFYJ', 'OPSXER58', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-04', '11:23', '1433391791');
+	(1, 'FKYFSGFGYPH4K414', 'OPSXER58', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '12:48', ''),
+	(2, 'FKWSSNU8XBZH9CSR', 'OPSXER58', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '12:58', ''),
+	(3, 'FKXVH4AUTQU3BFAC', 'OPSXER58', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '14:34', '');
 /*!40000 ALTER TABLE `tb_operator_dapur` ENABLE KEYS */;
 
 
@@ -948,13 +951,15 @@ CREATE TABLE IF NOT EXISTS `tb_operator_kurir` (
   `timestamp` varchar(128) NOT NULL,
   PRIMARY KEY (`nomor`),
   UNIQUE KEY `kode_faktur` (`kode_faktur`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
--- Dumping data for table dbsispesanan.tb_operator_kurir: ~0 rows (approximately)
+-- Dumping data for table dbsispesanan.tb_operator_kurir: ~2 rows (approximately)
 DELETE FROM `tb_operator_kurir`;
 /*!40000 ALTER TABLE `tb_operator_kurir` DISABLE KEYS */;
 INSERT INTO `tb_operator_kurir` (`nomor`, `kode_faktur`, `kode_operator`, `kode_orang_pelanggan`, `status_proses`, `tanggal`, `jam`, `timestamp`) VALUES
-	(1, 'FKDBK2PEW9JSSFYJ', '', 'ORP5G8T5KBUEQ5EU', '0', '2015-06-04', '11:23', '1433391791');
+	(1, 'FKYFSGFGYPH4K414', 'OPEXMTFG', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '12:51', ''),
+	(2, 'FKWSSNU8XBZH9CSR', 'OPEXMTFG', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '14:38', ''),
+	(3, 'FKXVH4AUTQU3BFAC', 'OPEXMTFG', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '14:37', '');
 /*!40000 ALTER TABLE `tb_operator_kurir` ENABLE KEYS */;
 
 
@@ -970,13 +975,15 @@ CREATE TABLE IF NOT EXISTS `tb_operator_pemesanan` (
   `timestamp` varchar(128) DEFAULT NULL,
   PRIMARY KEY (`nomor`),
   UNIQUE KEY `kode_faktur` (`kode_faktur`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
--- Dumping data for table dbsispesanan.tb_operator_pemesanan: ~0 rows (approximately)
+-- Dumping data for table dbsispesanan.tb_operator_pemesanan: ~2 rows (approximately)
 DELETE FROM `tb_operator_pemesanan`;
 /*!40000 ALTER TABLE `tb_operator_pemesanan` DISABLE KEYS */;
 INSERT INTO `tb_operator_pemesanan` (`nomor`, `kode_faktur`, `kode_operator`, `kode_orang_pelanggan`, `status_proses`, `tanggal`, `jam`, `timestamp`) VALUES
-	(1, 'FKDBK2PEW9JSSFYJ', 'OPMX7DY6', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-04', '10:57', '1433390257');
+	(1, 'FKYFSGFGYPH4K414', 'OPMX7DY6', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '12:14', ''),
+	(2, 'FKWSSNU8XBZH9CSR', 'OPMX7DY6', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '12:57', ''),
+	(3, 'FKXVH4AUTQU3BFAC', 'OPMX7DY6', 'ORP5G8T5KBUEQ5EU', '1', '2015-06-12', '14:22', '');
 /*!40000 ALTER TABLE `tb_operator_pemesanan` ENABLE KEYS */;
 
 
@@ -1040,7 +1047,7 @@ DELETE FROM `tb_pelanggan`;
 /*!40000 ALTER TABLE `tb_pelanggan` DISABLE KEYS */;
 INSERT INTO `tb_pelanggan` (`nomor`, `kode`, `email`, `sandi`, `kode_orang`, `tanggal`) VALUES
 	(1, 'PGVMCWFPA2ZGU51Y', 'ridwan@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORMMWB1NCCW0SDSH', '2015-5-6'),
-	(2, 'PG50RDNFPZPCYMJD', 'joko@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORP5G8T5KBUEQ5EU', '2015-5-6'),
+	(2, 'PG50RDNFPZPCYMJD', 'joko@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORP5G8T5KBUEQ5EU', '2015-6-12'),
 	(3, 'PGJ5BDZQQHJDZHKF', 'susilo@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORRZZGFNGDTNTNVW', '2015-5-6'),
 	(4, 'PG3E8QCF3V3WVAGT', 'yusuf@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORYTV0MCWEC6D0W8', '2015-5-6'),
 	(5, 'PGZ8KDDTPG9DKUUT', 'lulung@yahoo.com', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', 'ORJTUFUWTVR66NRR', '2015-5-6'),
@@ -1265,7 +1272,7 @@ CREATE TABLE IF NOT EXISTS `tb_resto_karyawan` (
   `aktif` varchar(1) NOT NULL,
   PRIMARY KEY (`nomor`,`kode`),
   UNIQUE KEY `kode_UNIQUE` (`kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table dbsispesanan.tb_resto_karyawan: ~2 rows (approximately)
 DELETE FROM `tb_resto_karyawan`;
@@ -1273,7 +1280,8 @@ DELETE FROM `tb_resto_karyawan`;
 INSERT INTO `tb_resto_karyawan` (`nomor`, `kode`, `nama`, `catatan`, `kode_resto_departemen`, `kode_resto_pekerjaan`, `kode_sipil_orang`, `tanggal_masuk`, `tanggal_berhenti`, `aktif`) VALUES
 	(141, 'KRBR1UDA', 'Eka Qadri Nuranti B', '', 'DPSPY1RW', 'PKU353J7', 'OR0FTCHEGAAZSJNF', '2015-05-05', '2016-05-05', '1'),
 	(142, 'KRSRP8GX', 'Adrian Setyadi', '', 'DPCUQFXR', 'PKQTXD1M', 'ORBSXHXRB1T7KUFV', '2015-05-05', '2016-05-05', '1'),
-	(143, 'KRSASYFF', 'I Made Ariana', '', 'DP1GPA34', 'PK539VAM', 'ORBPPXJM170MEQ5K', '2015-05-05', '2016-05-05', '1');
+	(143, 'KRSASYFF', 'I Made Ariana', '', 'DP1GPA34', 'PK539VAM', 'ORBPPXJM170MEQ5K', '2015-05-05', '2016-05-05', '1'),
+	(144, 'KR3GKFDK', 'Abd Cde', '', 'DPSPY1RW', 'PKU353J7', 'ORXNKRBCWVJUR1VG', '2015-06-11', '2015-06-18', '1');
 /*!40000 ALTER TABLE `tb_resto_karyawan` ENABLE KEYS */;
 
 
@@ -1311,7 +1319,7 @@ CREATE TABLE IF NOT EXISTS `tb_resto_operator` (
   `aktif` varchar(1) NOT NULL,
   PRIMARY KEY (`nomor`,`kode`),
   UNIQUE KEY `kode_UNIQUE` (`kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table dbsispesanan.tb_resto_operator: ~2 rows (approximately)
 DELETE FROM `tb_resto_operator`;
@@ -1319,7 +1327,8 @@ DELETE FROM `tb_resto_operator`;
 INSERT INTO `tb_resto_operator` (`nomor`, `kode`, `nama`, `sandi`, `catatan`, `kode_resto_karyawan`, `kode_resto_jenis_operator`, `aktif`) VALUES
 	(1, 'OPMX7DY6', 'Eka Qadri Nuranti B', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', '', 'KRBR1UDA', 'JOFK7ABU', '1'),
 	(2, 'OPSXER58', 'Adrian Setyadi', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', '', 'KRSRP8GX', 'JOEF4WJE', '1'),
-	(3, 'OPEXMTFG', 'I Made Ariana', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', '', 'KRSASYFF', 'JORYQRVH', '1');
+	(3, 'OPEXMTFG', 'I Made Ariana', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', '', 'KRSASYFF', 'JORYQRVH', '1'),
+	(4, 'OPUGBERR', 'Abd Cde', 'c741a75319e5724ca59a9fa2f69ae714cf13d39f6d7f6aaeba839bb599b4cf4d', '', 'KR3GKFDK', 'JOFK7ABU', '1');
 /*!40000 ALTER TABLE `tb_resto_operator` ENABLE KEYS */;
 
 
@@ -1378,18 +1387,19 @@ CREATE TABLE IF NOT EXISTS `tb_resto_produk` (
   UNIQUE KEY `nama_UNIQUE` (`nama`),
   KEY `produk_kode_kategori_produk` (`kode_resto_kategori_produk`),
   KEY `produk_kode_kategori_menu` (`kode_resto_jenis_produk`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table dbsispesanan.tb_resto_produk: ~6 rows (approximately)
 DELETE FROM `tb_resto_produk`;
 /*!40000 ALTER TABLE `tb_resto_produk` DISABLE KEYS */;
 INSERT INTO `tb_resto_produk` (`nomor`, `kode`, `nama`, `catatan`, `kode_resto_kategori_produk`, `kode_resto_jenis_produk`, `kode_produk_satuan`, `harga`) VALUES
-	(1, 'PDFAGG7H', 'Cumi Saus Peda', '', 'KPJYA6QN', 'JP4KGXTU', 'STKHB6VJ', '20000'),
+	(1, 'PDFAGG7H', 'Cumi Saus Pedas', '', 'KPJYA6QN', 'JP4KGXTU', 'STKHB6VJ', '20000'),
 	(2, 'PDMGXNPZ', 'Jus Alpukat', '', 'KPUCBGBW', 'JPBYHDCF', 'STWQXNFQ', '10000'),
 	(3, 'PDWZPMCF', 'Nasi Rames Spesial', '', 'KPJYA6QN', 'JP4KGXTU', 'STZWK5EC', '18000'),
 	(4, 'PD261M4T', 'Kepiting Saus Padang', '', 'KPJYA6QN', 'JPFSBCFD', 'STKHB6VJ', '18000'),
 	(5, 'PDMMKXW2', 'Ikan Nila Bakar Spesial', '', 'KPJYA6QN', 'JP4KGXTU', 'STKHB6VJ', '32000'),
-	(6, 'PDCDK03F', 'Gulai Ikan Tongkol', '', 'KPJYA6QN', 'JP4KGXTU', 'STKHB6VJ', '25000');
+	(6, 'PDCDK03F', 'Gulai Ikan Tongkol', '', 'KPJYA6QN', 'JP4KGXTU', 'STKHB6VJ', '25000'),
+	(7, 'PDJRGRKK', 'Test', '', 'KPJYA6QN', 'JP4KGXTU', 'STZWK5EC', '12000');
 /*!40000 ALTER TABLE `tb_resto_produk` ENABLE KEYS */;
 
 
@@ -1405,7 +1415,7 @@ CREATE TABLE IF NOT EXISTS `tb_resto_produk_foto` (
   `keterangan` text NOT NULL,
   `kode_resto_produk` varchar(8) NOT NULL,
   PRIMARY KEY (`nomor`,`kode`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- Dumping data for table dbsispesanan.tb_resto_produk_foto: ~11 rows (approximately)
 DELETE FROM `tb_resto_produk_foto`;
@@ -1422,7 +1432,8 @@ INSERT INTO `tb_resto_produk_foto` (`nomor`, `kode`, `nama`, `nama_berkas`, `nam
 	(64, 'FP0B4YKWJPBWYE7Z', 'Nasi Rames Spesial', 'RByphMgEsHKKJx277e16BsQrjWxczfqtrVJAPYh6HzcPX79Xc1jgW8JQ', 'GL-Travel-WM.M.L-09.jpg', '.jpg', '1', '', 'PDWZPMCF'),
 	(65, 'FPXF0VATX5JQC1AH', 'Kepiting Saus Padang', 'trJxFXK0r9urDu7Tbnuh3muGTvQhhx3NWT5JszPWSVzC74SJSkuK09Dk', '147_1_4-Photo.jpg', '.jpg', '1', '', 'PD261M4T'),
 	(66, 'FP1S8RVZ9YRXRFTJ', 'Ikan Nila Bakar Spesial', 'kSC4p5x8Pb1nR0aQEDh4nNeqM6qZqpu06vqBNkx8UaYQqCsd9BdWg5tj', 'ikan-nila-bakar-bumbu-padang.jpg', '.jpg', '1', '', 'PDMMKXW2'),
-	(67, 'FPPYQSV2RWY2UZRZ', 'Gulai Ikan Tongkol Pedas', '93ZX8DKaHHTS8N25rw1UhaPFU85a4ckhrM2PaxyZU93fE7aG04RGuqpF', 'Resep Gulai Ikan Tongkol Asam Padeh Khas Padang yang Lezat.jpg', '.jpg', '1', '', 'PDCDK03F');
+	(67, 'FPPYQSV2RWY2UZRZ', 'Gulai Ikan Tongkol Pedas', '93ZX8DKaHHTS8N25rw1UhaPFU85a4ckhrM2PaxyZU93fE7aG04RGuqpF', 'Resep Gulai Ikan Tongkol Asam Padeh Khas Padang yang Lezat.jpg', '.jpg', '1', '', 'PDCDK03F'),
+	(68, 'FPWTSBMZCSXYMWZA', 'Soto Ayam', 'RgxB8ctC520xBvxmctBWURJZQ2XCgwpYPf94qssvEb8x7EKbjcwHNwx1', 'Soto_ayam.JPG', '.jpg', '1', '', 'PDJRGRKK');
 /*!40000 ALTER TABLE `tb_resto_produk_foto` ENABLE KEYS */;
 
 
@@ -1514,7 +1525,7 @@ CREATE TABLE IF NOT EXISTS `tb_sipil_orang` (
   PRIMARY KEY (`nomor`,`kode`),
   UNIQUE KEY `noID_UNIQUE` (`kode`),
   KEY `orang_kode_panggilan` (`kode_sebutan`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table dbsispesanan.tb_sipil_orang: ~9 rows (approximately)
 DELETE FROM `tb_sipil_orang`;
@@ -1532,7 +1543,8 @@ INSERT INTO `tb_sipil_orang` (`nomor`, `kode`, `kode_sebutan`, `nama_depan`, `na
 	(10, 'ORSABG80K7CRXFUN', '', 'Surya', 'Paloh', 'Surya Paloh', '1', '', '', '', '', '1976-04-30', ''),
 	(11, 'ORYZUMUUMQKM4M56', '', 'I Made', 'Ariana', 'I Made Ariana', '1', '', '', '', '', '1982-05-10', ''),
 	(12, 'ORYNWMYK2VVRDHQ4', '', 'Rudi', 'Hartono', 'Rudi Hartono', '1', '', '', '', '', '1981-05-12', ''),
-	(13, 'ORSMQSNB2GRPJ00X', '', 'Surya', 'Wibawa', 'Surya Wibawa', '1', '', '', '', '', '1982-05-12', '');
+	(13, 'ORSMQSNB2GRPJ00X', '', 'Surya', 'Wibawa', 'Surya Wibawa', '1', '', '', '', '', '1982-05-12', ''),
+	(14, 'ORXNKRBCWVJUR1VG', 'SBFYC4ER', 'Abd', 'Cde', 'Abd Cde', '1', 'NGUMARQ5', 'PVURVMN5', 'KBQMFYB2', 'KCYZU4GU', '1985-06-12', '');
 /*!40000 ALTER TABLE `tb_sipil_orang` ENABLE KEYS */;
 
 
@@ -1652,18 +1664,24 @@ CREATE TABLE IF NOT EXISTS `tb_transaksi_jual` (
   KEY `pesanan_kode_produk` (`kode_produk`),
   KEY `pesanan_kode_pelanggan` (`kode_orang`),
   KEY `pesanan_kode_faktur_jual` (`kode_faktur_jual`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Dumping data for table dbsispesanan.tb_transaksi_jual: ~6 rows (approximately)
+-- Dumping data for table dbsispesanan.tb_transaksi_jual: ~10 rows (approximately)
 DELETE FROM `tb_transaksi_jual`;
 /*!40000 ALTER TABLE `tb_transaksi_jual` DISABLE KEYS */;
 INSERT INTO `tb_transaksi_jual` (`nomor`, `kode_faktur_jual`, `kode_produk`, `kode_orang`, `harga_satuan`, `kuantitas`, `subtotal`, `catatan`, `tanggal`, `jam`, `timestamp`) VALUES
-	(1, 'FKWYCDHBSNMK0FTZ', 'PDWZPMCF', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-04', '10:04', '1433387078'),
-	(2, 'FKWYCDHBSNMK0FTZ', 'PDMGXNPZ', 'ORP5G8T5KBUEQ5EU', '10000.0', 1, '10000.0', '', '2015-06-04', '10:04', '1433387078'),
-	(3, 'FKWYCDHBSNMK0FTZ', 'PDFAGG7H', 'ORP5G8T5KBUEQ5EU', '20000.0', 1, '20000.0', '', '2015-06-04', '10:04', '1433387078'),
-	(4, 'FKDBK2PEW9JSSFYJ', 'PDWZPMCF', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-04', '10:16', '1433387804'),
-	(5, 'FKDBK2PEW9JSSFYJ', 'PDMGXNPZ', 'ORP5G8T5KBUEQ5EU', '10000.0', 1, '10000.0', '', '2015-06-04', '10:16', '1433387804'),
-	(6, 'FKDBK2PEW9JSSFYJ', 'PDFAGG7H', 'ORP5G8T5KBUEQ5EU', '20000.0', 1, '20000.0', '', '2015-06-04', '10:16', '1433387804');
+	(1, 'FKYFSGFGYPH4K414', 'PDWZPMCF', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-12', '12:11', '1434085879'),
+	(2, 'FKYFSGFGYPH4K414', 'PDMGXNPZ', 'ORP5G8T5KBUEQ5EU', '10000.0', 1, '10000.0', '', '2015-06-12', '12:11', '1434085879'),
+	(3, 'FKYFSGFGYPH4K414', 'PDCDK03F', 'ORP5G8T5KBUEQ5EU', '25000.0', 1, '25000.0', '', '2015-06-12', '12:11', '1434085879'),
+	(4, 'FKYFSGFGYPH4K414', 'PDMMKXW2', 'ORP5G8T5KBUEQ5EU', '32000.0', 1, '32000.0', '', '2015-06-12', '12:11', '1434085879'),
+	(5, 'FKYFSGFGYPH4K414', 'PD261M4T', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-12', '12:11', '1434085879'),
+	(6, 'FKWSSNU8XBZH9CSR', 'PDWZPMCF', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-12', '12:54', '1434088465'),
+	(7, 'FKWSSNU8XBZH9CSR', 'PDMGXNPZ', 'ORP5G8T5KBUEQ5EU', '10000.0', 1, '10000.0', '', '2015-06-12', '12:54', '1434088465'),
+	(8, 'FKWSSNU8XBZH9CSR', 'PDCDK03F', 'ORP5G8T5KBUEQ5EU', '25000.0', 1, '25000.0', '', '2015-06-12', '12:54', '1434088465'),
+	(9, 'FKWSSNU8XBZH9CSR', 'PDMMKXW2', 'ORP5G8T5KBUEQ5EU', '32000.0', 1, '32000.0', '', '2015-06-12', '12:54', '1434088465'),
+	(10, 'FKWSSNU8XBZH9CSR', 'PD261M4T', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-12', '12:54', '1434088465'),
+	(11, 'FKXVH4AUTQU3BFAC', 'PDWZPMCF', 'ORP5G8T5KBUEQ5EU', '18000.0', 1, '18000.0', '', '2015-06-12', '14:16', '1434093363'),
+	(12, 'FKXVH4AUTQU3BFAC', 'PDMGXNPZ', 'ORP5G8T5KBUEQ5EU', '10000.0', 3, '30000.0', '', '2015-06-12', '14:16', '1434093363');
 /*!40000 ALTER TABLE `tb_transaksi_jual` ENABLE KEYS */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
