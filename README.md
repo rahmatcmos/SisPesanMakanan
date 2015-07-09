@@ -13,7 +13,7 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml.
 URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml.
 
-# Parameter Path Direktori
+# Parameter Direktori Sistem
 Path berkas: src/java/pilar/cls/ClsKonf.java.
 URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java.
 
