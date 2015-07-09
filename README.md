@@ -24,4 +24,4 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 1. Untuk login sebagai admin, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Masukkan id: "admin" dan sandi: "sandi" (untuk captcha case sensitive).
 2. Untuk login sebagai operator, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Selanjutnya pada halaman login admin, klik kata "Administrator" maka halaman akan beralih ke halaman login operator. Untuk login operator kata sandinya adalah "sandi" sedangkan id-nya bisa dilihat pada halaman administrasi operator (saat login sebagai admin).
 
-Ok demikian dan selamat mengembangkan lebih lanjut! :-)
+Ok, demikian dan selamat mengembangkan lebih lanjut! :-)
