@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>SisPesanMakanan by SisPesanMakanan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">SisPesanMakanan</h1>
+      <h2 class="project-tagline">Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Google Maps API) ini dibuat untuk mempercepat pengantaran makanan ke pelanggan. Lamanya pengantaran pada pemesanan makanan online biasanya disebabkan pengantar tidak mengetahui secara pasti lokasi pelanggan. Solusinya adalah dengan mengikutsertakan fitur GIS yang bisa diakses oleh pengantar makanan.</h2>
+      <a href="https://github.com/SisPesanMakanan/SisPesanMakanan" class="btn">View on GitHub</a>
+      <a href="https://github.com/SisPesanMakanan/SisPesanMakanan/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/SisPesanMakanan/SisPesanMakanan/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="sispesanmakanan" class="anchor" href="#sispesanmakanan" aria-hidden="true"><span class="octicon octicon-link"></span></a>SisPesanMakanan</h1>
+
+<p>Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Google Maps API) ini dibuat untuk mempercepat pengantaran makanan ke pelanggan. Lamanya pengantaran pada pemesanan makanan online biasanya disebabkan pengantar tidak mengetahui secara pasti lokasi pelanggan. Solusinya adalah dengan mengikutsertakan fitur GIS yang bisa diakses oleh pengantar makanan.</p>
+
+<h1>
+<a id="perangkat-lunak-pengembangan" class="anchor" href="#perangkat-lunak-pengembangan" aria-hidden="true"><span class="octicon octicon-link"></span></a>Perangkat Lunak Pengembangan</h1>
+
+<ol>
+<li>IDE: NetBeans IDE 8.0.2 (Build 201411181905). Updates: Updates available to version NetBeans 8.0.2 Patch 2.</li>
+<li>Java: 1.8.0_20; Java HotSpot(TM) Client VM 25.20-b23. Runtime: Java(TM) SE Runtime Environment 1.8.0_20-b26.</li>
+<li>Webserver Apache Tomcat (di-bundle bersama NetBeans).</li>
+<li>RDBMS MySQL. Bila menggunakan Windows bisa menggunakan MySQL bawaan XAMP sedangkan di Linux bisa menggunakan MariaDB. </li>
+<li>OS: Windows 7 version 6.1 running on x86; Cp1252; en_US (nb) / varian Linux (OpenSuSE, Ubuntu, dsb.).</li>
+<li>Browser: Mozilla Firefox versi 21+.</li>
+</ol>
+
+<h1>
+<a id="api-petagis" class="anchor" href="#api-petagis" aria-hidden="true"><span class="octicon octicon-link"></span></a>API Peta/GIS</h1>
+
+<ol>
+<li>Menggunakan Google Maps API sehingga saat pengembangan untuk modul tertentu yang menerapkan GIS harus terhubung dengan Internet.</li>
+</ol>
+
+<h1>
+<a id="parameter-koneksi-basisdata" class="anchor" href="#parameter-koneksi-basisdata" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameter Koneksi Basisdata</h1>
+
+<ol>
+<li>Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml</li>
+<li>URL: <a href="https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml">https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml</a>
+</li>
+</ol>
+
+<h1>
+<a id="parameter-direktori-sistem" class="anchor" href="#parameter-direktori-sistem" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameter Direktori Sistem</h1>
+
+<ol>
+<li>Path berkas: src/java/pilar/cls/ClsKonf.java</li>
+<li>URL: <a href="https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java">https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java</a>
+</li>
+</ol>
+
+<h1>
+<a id="informasi-login" class="anchor" href="#informasi-login" aria-hidden="true"><span class="octicon octicon-link"></span></a>Informasi Login</h1>
+
+<ol>
+<li>Untuk login sebagai admin, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Masukkan id: "admin" dan sandi: "sandi" (untuk captcha case sensitive).</li>
+<li>Untuk login sebagai operator, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Selanjutnya pada halaman login admin, klik kata "Administrator" maka halaman akan beralih ke halaman login operator. Untuk login operator kata sandinya adalah "sandi" sedangkan id-nya bisa dilihat pada halaman administrasi operator untuk peran yang berbeda (penerima pesanan, juru masak, dan pengantar).</li>
+</ol>
+
+<p>Ok, demikian dan selamat mengembangkan lebih lanjut! :-)</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/SisPesanMakanan/SisPesanMakanan">SisPesanMakanan</a> is maintained by <a href="https://github.com/SisPesanMakanan">SisPesanMakanan</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
