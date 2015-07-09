@@ -1,5 +1,5 @@
 # SisPesanMakanan
-Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Google Maps API) ini dibuat untuk mempercepat pengantaran makanan ke pelanggan. Lamanya pengantaran pada pemesanan makanan online biasanya disebabkan pengantar tidak mengetahui secara pasti lokasi pelanggan. Solusinya adalah dengan mengikutsertakan fitur GIS yang bisa diakses oleh pengantar makanan.
+Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Google Maps API) ini dibuat untuk mempercepat pengantaran makanan ke pelanggan. Lamanya pengantaran pada pemesanan makanan online biasanya disebabkan pengantar tidak mengetahui secara pasti lokasi pelanggan. Solusinya adalah dengan mengikutsertakan fitur GIS yang bisa diakses oleh pengantar makanan.(URL web: http://sispesanmakanan.github.io/SisPesanMakanan/).
 
 # Perangkat Lunak Pengembangan
 1. IDE: NetBeans IDE 8.0.2 (Build 201411181905). Updates: Updates available to version NetBeans 8.0.2 Patch 2.
