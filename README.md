@@ -9,6 +9,9 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 5. OS: Windows 7 version 6.1 running on x86; Cp1252; en_US (nb) / varian Linux (OpenSuSE, Ubuntu, dsb.).
 6. Browser: Mozilla Firefox versi 21+.
 
+# API Peta/GIS
+1. Menggunakan Google Maps API sehingga saat pengembangan untuk modul tertentu yang menerapkan GIS harus terhubung dengan Internet.
+
 # Parameter Koneksi Basisdata
 1. Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml
 2. URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml
