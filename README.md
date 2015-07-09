@@ -7,11 +7,11 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 3. OS: Windows 7 version 6.1 running on x86; Cp1252; en_US (nb) / varian Linux (OpenSuSE, Ubuntu, dsb.).
 
 # Parameter Koneksi Basisdata
-Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml
+Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml.
 URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml.
 
 # Parameter Path Direktori
-Path berkas: src/java/pilar/cls/ClsKonf.java
+Path berkas: src/java/pilar/cls/ClsKonf.java.
 URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java.
 
 Selamat mengembangkan lebih lanjut! :-)
