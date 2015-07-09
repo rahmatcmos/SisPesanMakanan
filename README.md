@@ -20,4 +20,8 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 1. Path berkas: src/java/pilar/cls/ClsKonf.java
 2. URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java
 
-Selamat mengembangkan lebih lanjut! :-)
+# Informasi Login
+1. Untuk login sebagai admin, klik gambar pengantar di pojok kiri atas (user: admin dan sandi: sandi) maka halaman akan beralih ke halaman login admin. Untuk captcha case sensitive.
+2. Untuk login sebagai operator, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Selanjutnya pada halaman login admin, klik kata "Administrator" maka halaman akan beralih ke halaman login operator. Untuk login operator kata sandinya adalah "sandi" sedangkan id-nya bisa dilihat pada halaman administrasi operator (saat login sebagai admin).
+
+Ok demikian dan selamat mengembangkan lebih lanjut! :-)
