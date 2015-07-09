@@ -10,11 +10,11 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 6. Browser: Mozilla Firefox versi 21+.
 
 # Parameter Koneksi Basisdata
-Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml.
-URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml.
+1. Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml
+2. URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/web/pilar/konf/basisdata/basisdataKonf.xml
 
 # Parameter Direktori Sistem
-Path berkas: src/java/pilar/cls/ClsKonf.java.
-URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java.
+1. Path berkas: src/java/pilar/cls/ClsKonf.java
+2. URL: https://github.com/SisPesanMakanan/SisPesanMakanan/blob/master/src/java/pilar/cls/ClsKonf.java
 
 Selamat mengembangkan lebih lanjut! :-)
