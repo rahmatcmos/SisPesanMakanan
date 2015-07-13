@@ -10,7 +10,7 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 6. Browser: Mozilla Firefox versi 21+.
 
 # API Peta/GIS
-1. Menggunakan Google Maps API sehingga saat pengembangan untuk modul tertentu yang menerapkan GIS harus terhubung dengan Internet.
+1. Tampilan peta mengandalkan API dari layanan Google Maps sehingga saat pengembangan modul tertentu yang menampilkan peta maka harus terhubung dengan Internet.
 
 # Parameter Koneksi Basisdata
 1. Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml
