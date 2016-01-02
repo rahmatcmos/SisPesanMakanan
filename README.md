@@ -10,7 +10,7 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 6. Browser: Mozilla Firefox versi 21+.
 
 # API Peta/GIS
-1. Menggunakan Google Maps API sehingga saat pengembangan untuk modul tertentu yang menerapkan GIS harus terhubung dengan Internet.
+1. Tampilan peta mengandalkan API dari layanan Google Maps sehingga saat pengembangan modul tertentu yang menampilkan peta maka harus terhubung dengan Internet.
 
 # Parameter Koneksi Basisdata
 1. Path berkas: web/pilar/konf/basisdata/basisdataKonf.xml
@@ -22,6 +22,9 @@ Sistem Pemesanan Makanan (SPM) berbasis Java/JSP dengan melibatkan fitur GIS (Go
 
 # Informasi Login
 1. Untuk login sebagai admin, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Masukkan id: "admin" dan sandi: "sandi" (untuk captcha case sensitive).
-2. Untuk login sebagai operator, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Selanjutnya pada halaman login admin, klik kata "Administrator" maka halaman akan beralih ke halaman login operator. Untuk login operator kata sandinya adalah "sandi" sedangkan id-nya bisa dilihat pada halaman administrasi operator untuk peran yang berbeda (penerima pesanan, juru masak, dan pengantar).
+2. Untuk login sebagai operator, klik gambar pengantar di pojok kiri atas maka halaman akan beralih ke halaman login admin. Selanjutnya pada halaman login admin, klik kata "Administrator" maka halaman akan beralih ke halaman login operator. Untuk login operator kata sandinya adalah "sandi" sedangkan id-nya bisa bisa menggunakan salah satu dari berikut: OPMX7DY6, OPSXER58, atau OPEXMTFG (penerima pesanan, juru masak, atau pengantar).
 
 Ok, demikian dan selamat mengembangkan lebih lanjut! :-)
+
+# Kontak
+I Made Ariana (i.made43{at}ui[dot]ac[dot]id)
